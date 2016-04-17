@@ -1,13 +1,13 @@
 name:                bitly-servant
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            Servant client for Bitly API
 description:         Please see README.md
-homepage:            https://github.com/githubuser/bitly-servant#readme
-license:             BSD3
+homepage:            https://github.com/nmohoric/bitly-servant#readme
+license:             MIT
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
+author:              Nick Mohoric
+maintainer:          nick.mohoric@gmail.com
+copyright:           2016 Nick Mohoric 
 category:            Web
 build-type:          Simple
 -- extra-source-files:
@@ -41,4 +41,4 @@ test-suite bitly-servant-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/bitly-servant
+  location: https://github.com/nmohoric/bitly-servant
