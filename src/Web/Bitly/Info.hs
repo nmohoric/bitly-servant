@@ -1,7 +1,5 @@
 {-# LANGUAGE DataKinds       #-}
-{-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeOperators   #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -12,15 +10,9 @@ module Web.Bitly.Info
        ) where
 
 import Control.Applicative
-import Control.Monad.Trans.Either
-import Data.Aeson (parseJSON, FromJSON, ToJSON, (.:))
 import Data.Aeson.Types
-import Data.Proxy
-import Data.Text (Text, pack)
-import Data.Time.Clock (UTCTime)
 import GHC.Generics
 import Servant.API
-import Servant.Client
 
 import Web.Bitly.Types
 
