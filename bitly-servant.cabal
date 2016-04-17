@@ -15,9 +15,11 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
+  ghc-options:         -fwarn-unused-imports
   exposed-modules:     Web.Bitly
                      , Web.Bitly.Expand
                      , Web.Bitly.Info
+                     , Web.Bitly.Lookup 
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bytestring     == 0.10.*
