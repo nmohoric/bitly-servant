@@ -17,6 +17,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Web.Bitly
                      , Web.Bitly.Expand
+                     , Web.Bitly.Info
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bytestring     == 0.10.*
@@ -24,6 +25,7 @@ library
                      , servant        == 0.4.*
                      , servant-client == 0.4.*
                      , text           == 1.2.*
+                     , time           == 1.4.*
   default-language:    Haskell2010
 
 test-suite bitly-servant-test

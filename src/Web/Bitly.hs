@@ -10,18 +10,22 @@ module Web.Bitly where
 
 import Control.Monad.Trans.Either
 import Data.Proxy
+import Servant.API
 import Servant.Client
+import Web.Bitly.Types
 import Web.Bitly.Expand
+import Web.Bitly.Info
 
-type API = ExpandAPI
+-- Testing only
+import Data.Text (pack)
+
+type API = ExpandAPI :<|> InfoAPI
 
 api :: Proxy API
 api = Proxy
 
-getExpanded = client api (BaseUrl Https "api-ssl.bitly.com" 443)
+expand' :<|> info' = client api (BaseUrl Https "api-ssl.bitly.com" 443)
 
-expand :: Token
-       -> Maybe UrlText
-       -> Maybe HashText
-       -> IO (Either ServantError ExpandResponse)
-expand key url hash = runEitherT $ getExpanded (Just key) url hash
+expand key url hash = runEitherT $ expand' (Just key) url hash
+info key url hash exp = runEitherT $ info' (Just key) url hash exp
+
