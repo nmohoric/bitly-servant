@@ -15,7 +15,8 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Bitly
+  exposed-modules:     Web.Bitly
+                     , Web.Bitly.Expand
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bytestring     == 0.10.*
