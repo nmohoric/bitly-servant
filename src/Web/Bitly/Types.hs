@@ -27,3 +27,6 @@ newtype CreatedBy = CreatedBy Text
 
 newtype Error = Error Text
   deriving (Show, Eq, Ord, FromText, ToText, FromJSON)
+
+newtype Domain = Domain Text
+  deriving (Eq, Show, Ord, FromText, ToText, FromJSON)
